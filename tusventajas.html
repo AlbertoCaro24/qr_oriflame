@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oriflame España</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .artista-img[src*="calendario.png"] {
+            max-width: 400px;
+            width: 100%;
+            display: block;
+            margin: 1.5rem auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header con menú hamburguesa arriba a la izquierda -->
+    <header class="main-header">
+        <div class="top-bar">
+            <!-- Menú hamburguesa -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- Menú desplegable (debe ir aquí para funcionar con el checkbox) -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="agenda.html">AGENDA</a></li>
+                    <li><a href="royalgarden.html">ROYAL GARDEN</a></li>
+                    <li><a href="hoteloccidentalaranjuez.html">HOTEL OCCIDENTAL ARANJUEZ</a></li>
+                    <li><a href="quehacerenmadrid.html">¿QUÉ HACER EN MADRID?</a></li>
+                    <li><a href="FAQS.html">FAQS</a></li>
+                    <li><a href="https://es.oriflame.com/customer-service">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <!-- Logo centrado -->
+            <div class="logo-header">
+                <a href="index.html" style="text-decoration:none;">
+                    <img src="estilos/logo-Oriflame-negro.png" alt="Oriflame" class="logo">
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container hero-content">
+            <!-- Cambia los botones así para que funcionen correctamente -->
+            <div class="vermadrid-btns">
+                <a href="#descuentos-disco" class="btn-descubre-agenda">DESCUENTO EN TIFFANY'S THE CLUB</a>
+                <a href="#descuentos-gastronomia" class="btn-descubre-agenda">DESCUENTO EN GASTRONOMÍA</a>
+                <a href="#descuentos-musicales" class="btn-descubre-agenda">DESCUENTO EN MUSICALES</a>
+            </div>
+
+            <!-- Añade los IDs en los títulos/secciones correspondientes -->
+            <!-- Reemplaza el bloque de la discoteca por este para usar el mismo estilo que vermadrid -->
+            <div class="vermadrid-list" id="descuentos-disco">
+                <section class="vermadrid-item">
+                    <div class="comer-desc">
+                        <h3 style="font-size:0.9rem; font-family:'AvenirNextBold', Arial, sans-serif;">
+                            DISCOTECA TIFFANY'S THE CLUB<br>(ACCESO GRATUITO*)
+                        </h3>
+                        <p>
+                            <strong>ACCESO GRATUITO LA NOCHE DEL EVENTO (09 de noviembre 2025)</strong><br>
+                            Gracias a <strong>Oriflame Beauty Fest</strong> tendrás acceso gratuito a la discoteca
+                            Tiffany's The Club con tu pulsera del evento.
+                            Disfruta de la mejor música y ambiente para continuar la celebración después del show
+                            oficial.
+                        </p>
+                        <img src="estilos/Logo Tiffanys 2025 white.png" alt="Tiffany's The Club" class="artista-img">
+                        <a class="btn-como-llegar"
+                            href="https://www.google.es/maps/place/Tiffany's+The+Club/@40.4455847,-3.6858811,16z/data=!3m2!4b1!5s0xd4228c24aa14fcf:0x818d20d7de8af778!4m6!3m5!1s0xd4228e7969e083f:0xab90a9bec0df7f05!8m2!3d40.4455806!4d-3.6833062!16s%2Fg%2F1hc1m07pv?hl=es&entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D"
+                            target="_blank" rel="noopener">
+                            VER UBICACIÓN
+                        </a>
+                    </div>
+                </section>
+            </div>
+            <!-- Gastronomía -->
+            <div class="goldwell-fest-desc" id="descuentos-gastronomia" style="margin-bottom:2.2rem;">
+                <h2 class="faqs-title" style="font-size:0.9rem;">
+                    Descuentos en gastronomía gracias a <br><strong>Oriflame Beauty Fest</strong>
+                </h2>
+                <br>
+
+                Descubre todas las ventajas de tu experiencia <strong>Oriflame Beauty Fest.</strong><br><br>
+                Como parte de nuestra comunidad, disfruta de descuentos exclusivos en los mejores restaurantes y
+                musicales de Madrid.*<br><br>
+                Vive la ciudad al máximo mientras celebramos juntos la creatividad y el color.
+                <br><br>
+                <span style="font-size:0.98rem;">*Válido del 8 al 10/11/25</span>
+                </p>
+            </div>
+        </div>
+        <div class="container hero-content">
+            <div class="vermadrid-list">
+                <section class="vermadrid-item">
+                    <div class="comer-list">
+                        <!-- EL JEFE -->
+                        <div class="comer-desc">
+                            <h3 style="font-size:0.9rem; font-family:'AvenirNextBold', Arial, sans-serif, ;">EL JEFE-
+                                TRAVELLING FOOD<br>(PROMOCIÓN*)</h3>
+                            <p>
+                                <strong>POSTRE DE REGALO CON LA RESERVA</strong><br>
+                                Te regalamos un <strong>postre gratis</strong> gracias a la reserva.<br>
+                                Ven a disfrutar del viaje por nuestra buena cocina con el postre de regalo incluido en
+                                tu reserva.
+                            </p>
+                            <img src="estilos/visita/eljefe.jpg" alt="El Jefe Taberna Madrileña" class="artista-img">
+                            <a class="btn-como-llegar"
+                                href="https://www.google.com/maps/search/?api=1&query=EL+JEFE+taberna+madrileña,+Madrid"
+                                target="_blank" rel="noopener">
+                                CÓMO LLEGAR
+                            </a>
+
+                        </div>
+                </section>
+                <!-- ASADOR GETARIA -->
+                <section class="vermadrid-item">
+                    <div class="comer-desc">
+                        <h3 style="font-size:0.9rem; font-family:'AvenirNextBold', Arial, sans-serif;">ASADOR
+                            GUETARIA<br>(15% DESCUENTO*)</h3>
+                        <p>
+                            <strong>15% DE DESCUENTO EN RESERVAS Y COMIDAS (BEBIDA NO INCLUIDA)</strong><br>
+                            Restaurante especializado en cocina vasca y asados tradicionales.<br>
+                            Disfruta de carnes y pescados a la brasa en un ambiente acogedor en Madrid.
+                        </p>
+                        <img src="estilos/visita/guetaria.webp" alt="Asador Getaria" class="artista-img">
+                        <a class="btn-como-llegar"
+                            href="https://www.google.com/maps/search/?api=1&query=Asador+Getaria,+Madrid"
+                            target="_blank" rel="noopener">
+                            CÓMO LLEGAR
+                        </a>
+                    </div>
+                </section>
+
+                <!-- LA TASQUITA DE PERÓN -->
+                <section class="vermadrid-item">
+                    <div class="comer-desc">
+                        <h3 style="font-size:0.9rem; font-family:'AvenirNextBold', Arial, sans-serif;">LA TASQUITA DE
+                            PERÓN<br>(15% DESCUENTO*)</h3>
+                        <p>
+                            <strong>15% DE DESCUENTO EN RESERVAS Y COMIDAS (BEBIDA NO INCLUIDA)</strong><br>
+                            Taberna moderna con cocina española y ambiente informal.<br>
+                            Ideal para tapear y compartir platos típicos en el centro de Madrid.
+                        </p>
+                        <img src="estilos/visita/latasquita.jpg" alt="La Tasquita de Perón" class="artista-img">
+                        <a class="btn-como-llegar"
+                            href="https://www.google.com/maps/search/?api=1&query=La+Tasquita+de+Perón,+Madrid"
+                            target="_blank" rel="noopener">
+                            CÓMO LLEGAR
+                        </a>
+                    </div>
+                </section>
+                <!-- NO CABE DUDA -->
+                <div class="vermadrid-list">
+                    <section class="vermadrid-item">
+                        <div class="comer-desc">
+                            <h3 style="font-size:0.9rem; font-family:'AvenirNextBold', Arial, sans-serif;">NO CABE DUDA
+                                <br>(10% DESCUENTO*)
+                            </h3>
+                            <p>
+                                <strong>10% DE DESCUENTO EN RESERVAS Y COMIDAS</strong><br>
+                                Bar y restaurante moderno junto al estadio Santiago Bernabéu, ideal para tapear, comer o
+                                cenar en un ambiente animado y actual.<br>
+                                Cocina variada, cócteles y terraza perfecta para grupos y afterworks.<br>
+                                <a href="https://nocabedudabar.com/" target="_blank" rel="noopener"
+                                    style="color:#3b2fc9; text-decoration:underline; font-weight:bold;">nocabedudabar.com</a>
+                            </p>
+                            <img src="estilos/ventajas/nocabedudabar.webp" alt="No Cabe Duda Bar" class="artista-img">
+                            <a class="btn-como-llegar"
+                                href="https://www.google.com/maps/search/?api=1&query=No+Cabe+Duda+Bar,+Madrid"
+                                target="_blank" rel="noopener">
+                                CÓMO LLEGAR
+                            </a>
+                        </div </section>
+                </div>
+                <div class="vermadrid-list">
+                    <section class="vermadrid-item">
+                        <div class="comer-desc">
+                            <h3 style="font-size:0.9rem; font-family:'AvenirNextBold', Arial, sans-serif;">PUERTA 57
+                                <br>(APERITIVO BIENVENIDA GRATIS*)
+                            </h3>
+                            <p>
+                                <strong>APERITIVO DE BIENVENIDA GRATIS</strong><br>
+                                Restaurante moderno dentro del Estadio Santiago Bernabéu, ideal para tapear, comer o
+                                cenar en un ambiente animado y actual.<br>
+                                Gracias a Oriflame Beauty Fest, tienes un aperitivo de bienvenida totalmente
+                                gratuito.<br>
+                            </p>
+                            <img src="estilos/visita/puerta57.jpg" alt="No Cabe Duda Bar" class="artista-img">
+                            <a class="btn-como-llegar"
+                                href="https://www.google.com/maps/search/?api=1&query=Puerta+57+Bernabeu,+Madrid"
+                                target="_blank" rel="noopener">
+                                CÓMO LLEGAR
+                            </a>
+                        </div </section>
+                </div>
+                <!-- LA TAQUERÍA DE BIRRA -->
+                <div class="vermadrid-list">
+                    <section class="vermadrid-item">
+                        <div class="comer-desc">
+                            <h3 style="font-size:0.9rem; font-family:'AvenirNextBold', Arial, sans-serif;">LA TAQUERÍA
+                                DE BIRRA <br>(10% DESCUENTO*)</h3>
+                            <p>
+                                <strong>10% DE DESCUENTO EN RESERVAS Y COMIDAS</strong><br>
+                                Auténtica taquería mexicana en Madrid, famosa por sus tacos, birra y ambiente
+                                festivo.<br>
+                                Ideal para disfrutar de sabores mexicanos con amigos y vivir una experiencia
+                                gastronómica diferente.<br>
+                            </p>
+                            <img src="estilos/ventajas/taqueriadebirra.jpg" alt="La Taquería de Birra"
+                                class="artista-img">
+                            <a class="btn-como-llegar"
+                                href="https://www.google.com/maps/search/?api=1&query=La+Taquería+de+Birra,+Madrid"
+                                target="_blank" rel="noopener">
+                                CÓMO LLEGAR
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <br>
+
+    <div class="container hero-content">
+        <div class="goldwell-fest-desc" id="descuentos-musicales">
+            <h2 style="font-size:1.2rem; font-family:'AvenirNextBold', Arial, sans-serif; margin-bottom:1.5rem;">
+                ¡DISFRUTA DE LOS MEJORES MUSICALES DE MADRID CON DESCUENTO GRACIAS A <br><strong>ORIFLAME BEAUTY
+                    FEST!</strong>
+            </h2>
+            <p>
+                Te ofrecemos un <strong>10% de descuento adicional</strong> al precio de la web oficial en los
+                siguientes musicales. <br>
+                <strong>El descuento es acumulable</strong> a las ofertas existentes y válido para todas las fechas y
+                zonas del teatro.<br>
+                <br>
+                <strong>Código descuento:</strong> <span
+                    style="background:#222; color:#fff; padding:0.2em 0.7em; border-radius:5px; letter-spacing:2px;">THINK10</span>
+            </p>
+            <!-- Sustituye tu <ul> por este bloque más visual y responsive -->
+            <div class="musicales-list">
+                <section class="musicales-item">
+                    <div class="musical-desc">
+                        <h3 style="font-size:1rem; font-family:'AvenirNextBold', Arial, sans-serif; text-align:center;">
+                            Wicked</h3>
+                        <p>
+                            <strong>10% de descuento adicional con código THINK10</strong><br>
+                            Musical de éxito internacional, magia y espectáculo en Madrid.<br>
+                            <a href="https://wickedelmusical.com/" target="_blank" rel="noopener"
+                                style="color:#3b2fc9; text-decoration:underline; font-weight:bold;">wickedelmusical.com</a>
+                        </p>
+                        <a href="https://wickedelmusical.com/" target="_blank" rel="noopener">
+                            <img src="estilos/ventajas/wicked.webp" alt="Wicked" class="artista-img">
+                        </a>
+                        <a class="btn-descubre-agenda" href="https://wickedelmusical.com/" target="_blank"
+                            rel="noopener">
+                            COMPRAR ENTRADAS
+                        </a>
+                    </div>
+                </section>
+                <section class="musicales-item">
+                    <div class="musical-desc">
+                        <h3 style="font-size:1rem; font-family:'AvenirNextBold', Arial, sans-serif; text-align:center;">
+                            Los Miserables</h3>
+                        <p>
+                            <strong>10% de descuento adicional con código THINK10</strong><br>
+                            El clásico musical que emociona y sorprende.<br>
+                            <a href="https://miserableselmusical.es/" target="_blank" rel="noopener"
+                                style="color:#3b2fc9; text-decoration:underline; font-weight:bold;">miserableselmusical.es</a>
+                        </p>
+                        <a href="https://miserableselmusical.es/" target="_blank" rel="noopener">
+                            <img src="estilos/ventajas/miserables.jpg" alt="Los Miserables" class="artista-img">
+                        </a>
+                        <a class="btn-descubre-agenda" href="https://miserableselmusical.es/" target="_blank"
+                            rel="noopener">
+                            COMPRAR ENTRADAS
+                        </a>
+                    </div>
+                </section>
+                <section class="musicales-item">
+                    <div class="musical-desc">
+                        <h3 style="font-size:1rem; font-family:'AvenirNextBold', Arial, sans-serif; text-align:center;">
+                            The Book of Mormon</h3>
+                        <p>
+                            <strong>10% de descuento adicional con código THINK10</strong><br>
+                            Humor y música en uno de los musicales más premiados.<br>
+                            <a href="https://thebookofmormonelmusical.es/" target="_blank" rel="noopener"
+                                style="color:#3b2fc9; text-decoration:underline; font-weight:bold;">thebookofmormonelmusical.es</a>
+                        </p>
+                        <a href="https://thebookofmormonelmusical.es/" target="_blank" rel="noopener">
+                            <img src="estilos/ventajas/thebook.webp" alt="The Book of Mormon" class="artista-img">
+                        </a>
+                        <a class="btn-descubre-agenda" href="https://thebookofmormonelmusical.es/" target="_blank"
+                            rel="noopener">
+                            COMPRAR ENTRADAS
+                        </a>
+                    </div>
+                </section>
+                <section class="musicales-item">
+                    <div class="musical-desc">
+                        <h3 style="font-size:1rem; font-family:'AvenirNextBold', Arial, sans-serif; text-align:center;">
+                            La función que sale mal</h3>
+                        <p>
+                            <strong>10% de descuento adicional con código THINK10</strong><br>
+                            Comedia y diversión asegurada en este musical.<br>
+                            <a href="https://www.lafuncionquesalemal.es/" target="_blank" rel="noopener"
+                                style="color:#3b2fc9; text-decoration:underline; font-weight:bold;">lafuncionquesalemal.es</a>
+                        </p>
+                        <a href="https://www.lafuncionquesalemal.es/" target="_blank" rel="noopener">
+                            <img src="estilos/ventajas/lafuncion.webp" alt="La función que sale mal"
+                                class="artista-img">
+                        </a>
+                        <a class="btn-descubre-agenda" href="https://www.lafuncionquesalemal.es/" target="_blank"
+                            rel="noopener">
+                            COMPRAR ENTRADAS
+                        </a>
+                    </div>
+                </section>
+            </div>
+            <div style="background:#f7f7f7; border-radius:8px; padding:1rem 1.2rem; margin-top:1.5rem; font-size:1rem;">
+                <strong>¿Cómo funciona?</strong><br>
+                <ul style="margin:0.7rem 0 0 1.2rem; padding:0;">
+                    <li>Introduce el código <strong>THINK10</strong> al comprar tus entradas en la web oficial de cada
+                        musical.</li>
+                    <li>El descuento se aplica sobre cualquier precio o promoción vigente.</li>
+                    <li>¡Cuanto antes reserves, mayor será tu descuento!</li>
+                </ul>
+                <p style="margin-top:0.7rem;">
+                    <em>Ejemplo:</em> Si ya hay un 15% de descuento en una fecha, con el código tendrás un 25% en total.
+                    Si hay un 35% en Book of Mormon, ¡puedes llegar hasta un 45%!
+                    <img src="estilos/ventajas/calendario.png" alt="Puerta del Sol" class="artista-img">
+                </p>
+                <p style="margin:0;">
+                    <strong>Promoción válida hasta el fin del evento. ¡No te lo pierdas!</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://es.oriflame.com/">Aviso legal</a>
+                <a href="https://es.oriflame.com/">Términos de uso</a>
+                <a href="https://es.oriflame.com/">Política de privacidad</a>
+                <a href="https://es.oriflame.com/">Política de cookies</a>
+                <a href="https://es.oriflame.com/customer-service">Contacto</a>
+            </div>
+            <!-- Redes sociales centradas en el footer -->
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/oriflameespana/"><img src="estilos/iconos/instagram.svg"
+                        class="icon-social"></a>
+                <a href="https://www.tiktok.com/@oriflameespanaoficial?lang=es"><img src="estilos/iconos/tiktok.svg"
+                        class="icon-social"></a>
+            </div>
+            <p>Copyright © 2026 Oriflame Cosmetics SA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oriflame España</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header con menú hamburguesa arriba a la izquierda -->
+    <header class="main-header">
+        <div class="top-bar">
+            <!-- Menú hamburguesa -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- Menú desplegable -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="agenda.html">AGENDA</a></li>
+                    <li><a href="royalgarden.html">ROYAL GARDEN</a></li>
+                    <li><a href="hoteloccidentalaranjuez.html">HOTEL OCCIDENTAL ARANJUEZ</a></li>
+                    <li><a href="quehacerenmadrid.html">¿QUÉ HACER EN MADRID?</a></li>
+                    <li><a href="FAQS.html">FAQS</a></li>
+                    <li><a href="https://es.oriflame.com/customer-service">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <!-- Logo centrado -->
+            <div class="logo-header">
+                <a href="index.html" style="text-decoration:none;">
+                    <img src="estilos/logo-Oriflame-negro.png" alt="Oriflame" class="logo">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Hero principal -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="goldwell-fest-desc">
+                <h2 class="faqs-title">ROYAL GARDEN</h2>
+                <p>
+                    Royal Garden es un complejo de 35.000m2, incluyendo un gran salón de espectáculos de 2.000 metros
+                    diáfanos. Cuenta con una capacidad de hasta 2.500 asistentes.
+                </p>
+                <p>
+                    Cuyas instalaciones, totalmente personalizables (4 salones despanelables, restauración,
+                    espectáculos, discotecas y jardín exterior) hacen que Royal Garden sea el espacio perfecto para
+                    cualquier tipo de evento.
+                </p>
+                <p>
+                    Su ubicación a 30 minutos del centro de Madrid. Aranjuez como ciudad Patrimonio de la Humanidad.
+                </p>
+                <div style="margin-top:2.2rem; text-align:center;">
+                    <p
+                        style="font-family:'OriflameSans3.0-Regular', Arial, sans-serif; font-size:1.08rem; margin-bottom:1.2rem;">
+                        <strong>UBICACIÓN</strong><br>
+                        Pl. de la Unesco, 1, 28300 Aranjuez, Madrid
+                    </p>
+                    <a href="https://www.google.com/maps/search/Royal+Garden+Aranjuez" target="_blank"
+                        class="btn-descubre-agenda">VER UBICACIÓN</a>
+                </div>
+                <div class="slider-container">
+                    <img src="estilos/royalgarden/9-7-2_1_251575-174436038291112.jpeg" class="slider-img active"
+                        alt="Royal Garden Aranjuez">
+                    <img src="estilos/royalgarden/DSC_4927_VeraValentin-1-600x401.webp" class="slider-img"
+                        alt="Royal Garden Aranjuez">
+                    <img src="estilos/royalgarden/images.jpg" class="slider-img" alt="Royal Garden Aranjuez">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://es.oriflame.com/">Aviso legal</a>
+                <a href="https://es.oriflame.com/">Términos de uso</a>
+                <a href="https://es.oriflame.com/">Política de privacidad</a>
+                <a href="https://es.oriflame.com/">Política de cookies</a>
+                <a href="https://es.oriflame.com/customer-service">Contacto</a>
+            </div>
+            <!-- Redes sociales centradas en el footer -->
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/oriflameespana/"><img src="estilos/iconos/instagram.svg"
+                        class="icon-social"></a>
+                <a href="https://www.tiktok.com/@oriflameespanaoficial?lang=es"><img src="estilos/iconos/tiktok.svg"
+                        class="icon-social"></a>
+            </div>
+            <p>Copyright © 2026 Oriflame Cosmetics SA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slider-img');
+            let currentSlide = 0;
+            const slideInterval = 2000; // 2 seconds
+
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+
+            setInterval(nextSlide, slideInterval);
+        });
+    </script>
+</body>
+
+</html>

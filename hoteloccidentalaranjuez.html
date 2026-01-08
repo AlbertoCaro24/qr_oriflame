@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oriflame España</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header con menú hamburguesa arriba a la izquierda -->
+    <header class="main-header">
+        <div class="top-bar">
+            <!-- Menú hamburguesa -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- Menú desplegable -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="agenda.html">AGENDA</a></li>
+                    <li><a href="royalgarden.html">ROYAL GARDEN</a></li>
+                    <li><a href="hoteloccidentalaranjuez.html">HOTEL OCCIDENTAL ARANJUEZ</a></li>
+                    <li><a href="quehacerenmadrid.html">¿QUÉ HACER EN MADRID?</a></li>
+                    <li><a href="FAQS.html">FAQS</a></li>
+                    <li><a href="https://es.oriflame.com/customer-service">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <!-- Logo centrado -->
+            <div class="logo-header">
+                <a href="index.html" style="text-decoration:none;">
+                    <img src="estilos/logo-Oriflame-negro.png" alt="Oriflame" class="logo">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Hero principal -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="goldwell-fest-desc">
+                <h2 class="faqs-title">HOTEL OCCIDENTAL ARANJUEZ</h2>
+                <p>
+                    Situado en un entorno privilegiado, con una ubicación estratégica que permite disfrutar de la
+                    tranquilidad de Aranjuez y al mismo tiempo estar cerca de Madrid, ya que se puede llegar a la
+                    capital en tan solo 50 minutos.
+                </p>
+                <p>
+                    El Occidental Aranjuez es un perfecto hotel urbano, con unas espectaculares zonas comunes, halls,
+                    spa, piscina exterior, pistas de padel y gimnasio.
+                </p>
+                <p>
+                    Se encuentra ubicado frente al Casino Royal Garden, 1 minuto caminando.
+                </p>
+                <div style="margin-top:2.2rem; text-align:center;">
+                    <p
+                        style="font-family:'OriflameSans3.0-Regular', Arial, sans-serif; font-size:1.08rem; margin-bottom:1.2rem;">
+                        <strong>UBICACIÓN</strong><br>
+                        Pl. de la Unesco, 2, 28300 Aranjuez, Madrid
+                    </p>
+                    <a href="https://www.google.com/maps/search/Hotel+Occidental+Aranjuez" target="_blank"
+                        class="btn-descubre-agenda">VER UBICACIÓN</a>
+                </div>
+                <div class="slider-container">
+                    <img src="estilos/hoteloccidentalaranjuez/1000000403156933693070-1.jpg" class="slider-img active"
+                        alt="Hotel Occidental Aranjuez">
+                    <img src="estilos/hoteloccidentalaranjuez/2f9b716b0ffbb26614bd7587f12acd2a59d3aa876a2011dd7b1d5c94c525.webp"
+                        class="slider-img" alt="Hotel Occidental Aranjuez">
+                    <img src="estilos/hoteloccidentalaranjuez/c4a6bd0c.webp" class="slider-img"
+                        alt="Hotel Occidental Aranjuez">
+                    <img src="estilos/hoteloccidentalaranjuez/oaran-view.jpg" class="slider-img"
+                        alt="Hotel Occidental Aranjuez">
+                    <img src="estilos/hoteloccidentalaranjuez/occidental-aranjuez.jpg" class="slider-img"
+                        alt="Hotel Occidental Aranjuez">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://es.oriflame.com/">Aviso legal</a>
+                <a href="https://es.oriflame.com/">Términos de uso</a>
+                <a href="https://es.oriflame.com/">Política de privacidad</a>
+                <a href="https://es.oriflame.com/">Política de cookies</a>
+                <a href="https://es.oriflame.com/customer-service">Contacto</a>
+            </div>
+            <!-- Redes sociales centradas en el footer -->
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/oriflameespana/"><img src="estilos/iconos/instagram.svg"
+                        class="icon-social"></a>
+                <a href="https://www.tiktok.com/@oriflameespanaoficial?lang=es"><img src="estilos/iconos/tiktok.svg"
+                        class="icon-social"></a>
+            </div>
+            <p>Copyright © 2026 Oriflame Cosmetics SA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slider-img');
+            let currentSlide = 0;
+            const slideInterval = 2000; // 2 seconds
+
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+
+            setInterval(nextSlide, slideInterval);
+        });
+    </script>
+</body>
+
+</html>

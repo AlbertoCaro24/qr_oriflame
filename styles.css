@@ -1,0 +1,1505 @@
+/* Tipografías */
+/* HEADLINE: Oriflame Sans Bold */
+@font-face {
+    font-family: 'OriflameSans3.0-Bold';
+    src: url('estilos/fuentes/OriflameSans3.0-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* BODY COPY: Oriflame Sans Regular */
+@font-face {
+    font-family: 'OriflameSans3.0-Regular';
+    src: url('estilos/fuentes/OriflameSans3.0-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* INTRODUCTION LINE: Oriflame Sans Bold Oblique */
+@font-face {
+    font-family: 'OriflameSans3.0-BoldOblique';
+    src: url('estilos/fuentes/OriflameSans3.0-BoldOblique.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Fondo general */
+body {
+    background: #FFFFFF;
+    /* Oriflame White */
+    font-family: 'OriflameSans3.0-Regular', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2D2525;
+    /* Oriflame Warm Black */
+    font-size: 16px;
+    transition: transform 0.35s cubic-bezier(.77, 0, .175, 1);
+    padding-top: 76px;
+}
+
+/* HEADLINE: solo títulos principales */
+.headline,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.agenda-title,
+.vermadrid-title,
+.vermadrid-num,
+.vermadrid-desc h3,
+.comer-title,
+.comer-zona,
+.comer-desc h3,
+.faqs-title,
+.faq-question {
+    font-family: 'OriflameSans3.0-Bold', Arial, sans-serif !important;
+    font-weight: bold;
+    color: #2D2525;
+    /* Oriflame Warm Black */
+}
+
+/* INTRODUCTION LINE: subtítulos o líneas introductorias */
+.intro-line {
+    font-family: 'OriflameSans3.0-BoldOblique', Arial, sans-serif !important;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+/* BODY COPY: textos normales y descripciones */
+body,
+.agenda-desc,
+.agenda-desc p,
+.vermadrid-desc,
+.vermadrid-desc p,
+.comer-desc,
+.comer-desc p,
+.faq-answer,
+.faqs-subtitle,
+.goldwell-fest-desc,
+.goldwell-fest-desc p {
+    font-family: 'OriflameSans3.0-Regular', Arial, sans-serif !important;
+    font-weight: normal;
+    color: #2D2525;
+}
+
+/* Corrige hero-content para que no sobrescriba la fuente */
+.hero-content p {
+    font-family: 'OriflameSans3.0-Regular', Arial, sans-serif !important;
+    font-size: 1.15rem;
+    color: #2D2525;
+    /* Oriflame Warm Black */
+    margin-bottom: 1rem;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+@media (max-width: 600px) {
+    .hero-content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+/* Menú hamburguesa y horizontal */
+.main-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: -270px;
+    width: 260px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 2px 0 16px rgba(45, 37, 37, 0.1);
+    /* Warm Black shadow */
+    border-radius: 0 16px 16px 0;
+    z-index: 999;
+    align-items: flex-start;
+    padding-top: 60px;
+    transition: left 0.35s cubic-bezier(.77, 0, .175, 1);
+    overflow: hidden;
+}
+
+.menu-toggle-checkbox:checked~.main-nav ul {
+    left: 0;
+}
+
+.main-nav ul li {
+    width: 100%;
+    border-bottom: 1px solid #eaeaea;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.menu-toggle-checkbox:checked~.main-nav ul li {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.15s;
+}
+
+.main-nav ul li:last-child {
+    border-bottom: none;
+}
+
+.main-nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    color: #2D2525;
+    /* Warm Black */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    background: none;
+    border-radius: 0;
+    text-align: left;
+    transition: background 0.2s, color 0.2s;
+}
+
+.main-nav ul li a:hover {
+    background: #9CDABC;
+    /* Oriflame Green */
+    color: #FFFFFF;
+    border-radius: 0;
+}
+
+/* Icono hamburguesa alineado a la izquierda y animación X */
+.hamburger {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0.5rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1001;
+    background: none;
+    border: none;
+    padding: 0;
+    overflow: visible;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 24px;
+    background: #2D2525;
+    /* Warm Black */
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: transform 0.35s cubic-bezier(.77, 0, .175, 1), opacity 0.25s;
+    position: relative;
+}
+
+.menu-toggle-checkbox:checked+.hamburger span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg) scale(0.85);
+}
+
+.menu-toggle-checkbox:checked+.hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle-checkbox:checked+.hamburger span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg) scale(0.85);
+}
+
+.menu-toggle-checkbox {
+    display: none;
+}
+
+/* Centrado y alineación de barra superior */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0.7rem 1.2rem;
+    height: 56px;
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+/* Logo Styles */
+.logo {
+    max-height: 25px;
+    /* Adjust height to fit the 56px navbar nicely */
+    width: auto;
+    display: block;
+}
+
+.logo-header-img {
+    height: 60px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.agenda-title {
+    text-align: center;
+}
+
+/* Menú horizontal en escritorio */
+@media (min-width: 900px) {
+    .main-nav ul {
+        position: static;
+        left: 0 !important;
+        top: auto;
+        height: auto;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0.7rem 0;
+        transition: none;
+        overflow: visible;
+    }
+
+    .main-nav ul li {
+        border: none;
+        width: auto;
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .main-nav ul li a {
+        text-align: center;
+        padding: 1rem 0.7rem;
+        border-radius: 8px;
+    }
+
+    .menu-toggle-checkbox,
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Botones */
+.btn-primary,
+.btn-como-llegar {
+    display: inline-block;
+    margin: 1rem auto 0 auto;
+    padding: 0.35rem 1.2rem;
+    font-size: 0.95rem;
+    border-radius: 5px;
+    background: #2D2525;
+    /* Warm Black */
+    color: #fff;
+    font-family: 'OriflameSans3.0-Regular', Arial, sans-serif;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(45, 37, 37, 0.15);
+    cursor: pointer;
+    max-width: 140px;
+    width: auto;
+    text-align: center;
+}
+
+.btn-como-llegar {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    background: #fff;
+    border: 2px solid #222;
+    border-radius: 3px;
+    color: #222;
+    font-family: 'AvenirNextBold', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+.btn-como-llegar:hover {
+    background: #222;
+    color: #fff;
+}
+
+.btn-descubre-agenda {
+    display: block;
+    margin: 1.5rem auto;
+    padding: 0.7rem 2.2rem;
+    font-size: 1rem;
+    font-family: 'OriflameSans3.0-Bold', Arial, sans-serif;
+    color: #2D2525;
+    background: #fff;
+    border: 2px solid #2D2525;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: normal;
+    letter-spacing: 1px;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+    max-width: 280px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-descubre-agenda:hover {
+    background: #2D2525;
+    color: #fff;
+}
+
+/* FAQS */
+.faqs-section {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+}
+
+.faqs-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.faqs-title {
+    font-size: 2.2rem;
+    color: #2D2525;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.faqs-subtitle {
+    color: #2D2525;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.faqs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 700px;
+}
+
+.faq-item {
+    background: #F9F9F9;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(45, 37, 37, 0.05);
+    padding: 1.5rem 1.2rem;
+}
+
+.faq-question {
+    color: #2D2525;
+    font-size: 1.15rem;
+    margin-bottom: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.faq-answer {
+    color: #222;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+}
+
+.faq-answer a {
+    color: #9CDABC;
+    /* Turquoise (was Atlantic) */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.faq-answer a:hover {
+    color: #FF8072;
+    /* Coral */
+}
+
+/* Comer y Ver Madrid */
+.comer-section,
+.vermadrid-section {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+}
+
+.comer-header,
+.vermadrid-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.comer-title,
+.vermadrid-title {
+    font-size: 2rem;
+    color: #FF8072;
+    /* Coral */
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.comer-list,
+.vermadrid-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+.comer-item,
+.vermadrid-item {
+    display: flex;
+    flex-direction: row;
+    background: #9CDABC;
+    /* Green */
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 110px;
+    box-shadow: 0 2px 12px rgba(45, 37, 37, 0.08);
+    align-items: stretch;
+}
+
+.comer-item {
+    border: 4px solid #9CDABC !important;
+    box-shadow: none !important;
+}
+
+.comer-time,
+.vermadrid-time {
+    background: #9CDABC;
+    color: #2D2525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.2rem;
+    font-size: 1.1rem;
+    min-width: 120px;
+    border-right: 2px solid #fff;
+    text-align: center;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.comer-zona,
+.vermadrid-num {
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.comer-desc,
+.vermadrid-desc {
+    flex: 1;
+    background: #ffffff;
+    color: #000000;
+    padding: 1.2rem 1.5rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comer-desc h3,
+.vermadrid-desc h3 {
+    color: #000000;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    background: none;
+    border: none;
+}
+
+.comer-desc p,
+.vermadrid-desc p {
+    color: #000000;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 0.7rem;
+}
+
+/* Agenda Professional Redesign */
+
+.agenda-date-header {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #2D2525;
+    padding-bottom: 0.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+.intro-line {
+    font-size: 1.5rem !important;
+    text-align: left !important;
+    color: #2D2525;
+    margin: 0;
+}
+
+.agenda-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.agenda-row {
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #EAEAEA;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.agenda-row:last-child {
+    border-bottom: none;
+}
+
+.agenda-time-col {
+    width: 140px;
+    flex-shrink: 0;
+    font-family: 'OriflameSans3.0-Bold', Arial, sans-serif;
+    font-size: 1.1rem;
+    color: #FF8072;
+    /* Coral for time/highlight */
+    padding-right: 1.5rem;
+    text-align: right;
+    padding-top: 0.2rem;
+    /* Align with title */
+}
+
+.agenda-details-col {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.agenda-event-title,
+.agenda-type {
+    font-family: 'OriflameSans3.0-Bold', Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #2D2525;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    background: none;
+    /* Reset old styles if any */
+    padding: 0;
+    text-align: left;
+}
+
+.agenda-event-desc,
+.agenda-desc p {
+    font-family: 'OriflameSans3.0-Regular', Arial, sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+}
+
+/* Responsive Agenda */
+
+/* Slider Styles */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    height: 400px;
+    /* Adjust height as needed */
+    overflow: hidden;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+.slider-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-img.active {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .agenda-row {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        gap: 0.5rem;
+    }
+
+    .agenda-time-col {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 0.2rem;
+        font-size: 1rem;
+    }
+
+    .intro-line {
+        font-size: 1.2rem !important;
+        padding-left: 1rem;
+    }
+
+    .agenda-date-header {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: auto;
+    }
+}
+
+/* Centrado apertura puertas */
+.apertura-centro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.apertura-centro p {
+    text-align: center;
+    width: 100%;
+}
+
+/* Footer centrado y limpio */
+.main-footer {
+    background: none;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+}
+
+.main-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #222;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'OriflameSans3.0-Regular', Arial, sans-serif;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #000;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.icon-social {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(100%);
+    transition: filter 0.2s;
+}
+
+.icon-social:hover {
+    filter: grayscale(0%);
+}
+
+.main-footer p {
+    color: #222;
+    font-size: 1rem;
+    margin: 0.5rem 0 0 0;
+    font-family: 'OriflameSans3.0-Regular', Arial, sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .faqs-section,
+    .comer-section,
+    .vermadrid-section {
+        padding: 1rem 0.2rem;
+    }
+
+    .faqs-list,
+    .comer-list,
+    .vermadrid-list {
+        max-width: 98vw;
+        gap: 0.8rem;
+    }
+
+    .faq-item,
+    .comer-item,
+    .vermadrid-item {
+        padding: 1rem 1rem;
+        flex-direction: column;
+        min-height: unset;
+    }
+
+    .faqs-title,
+    .comer-title,
+    .vermadrid-title {
+        font-size: 1.3rem;
+    }
+
+    .faq-question,
+    .comer-desc h3,
+    .vermadrid-desc h3 {
+        font-size: 1rem;
+    }
+
+    .comer-time,
+    .vermadrid-time {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        min-width: 0;
+        padding: 0.7rem 1rem;
+        border-right: none;
+        border-bottom: 2px solid #fff;
+        font-size: 1rem;
+    }
+
+    .comer-desc,
+    .vermadrid-desc {
+        padding: 1rem 1rem;
+        font-size: 0.98rem;
+    }
+
+    .agenda-item {
+        flex-direction: column;
+        min-height: unset;
+    }
+
+    .agenda-hour-left {
+        border-right: none;
+        border-bottom: 2px solid #fff;
+        min-width: 0;
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0.7rem 1rem;
+        font-size: 1rem;
+    }
+
+    .agenda-center {
+        padding: 1rem 1rem;
+    }
+
+    body.menu-open {
+        transform: translateX(260px);
+    }
+
+    .agenda-section {
+        max-width: 98vw;
+        padding: 0 0.3rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        font-weight: normal;
+    }
+
+    .agenda-title {
+        font-size: 2rem;
+        font-family: 'OriflameSans3.0-Bold', Arial, sans-serif;
+    }
+
+    .agenda-time {
+        font-size: 1rem;
+        gap: 1rem;
+        padding: 0.7rem 0.7rem;
+        font-weight: normal;
+    }
+
+    .agenda-desc {
+        padding: 0.8rem 0.7rem 1rem 0.7rem;
+        font-size: 0.98rem;
+        font-family: 'OriflameSans3.0-Bold', Arial, sans-serif;
+    }
+}
+
+/* Goldwell Festival Descriptions */
+.goldwell-fest-desc {
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+    text-align: justify;
+    font-family: 'OriflameSans3.0-Regular', Arial, sans-serif !important;
+    font-size: 1.15rem;
+    color: #2D2525;
+    letter-spacing: 0.5px;
+}
+
+.goldwell-fest-desc h1,
+.goldwell-fest-desc h2,
+.goldwell-fest-desc h3 {
+    font-family: 'OriflameSans3.0-Bold', Arial, sans-serif !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+.goldwell-fest-desc p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    font-family: 'OriflameSans3.0-Regular', Arial, sans-serif !important;
+}
+
+/* Artistas Goldwell Festival Descriptions */
+.artistas-goldwell-desc {
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+    text-align: center;
+    font-family: 'OriflameSans3.0-Bold', Arial, sans-serif;
+    font-size: 1.15rem;
+    color: #222;
+    letter-spacing: 0.5px;
+}
+
+.artistas-goldwell-desc p {
+    margin-bottom: 1.1rem;
+    text-align: center;
+}
+
+.artista-block {
+    margin-bottom: 2.2rem;
+    padding: 1.2rem 0.5rem;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(45, 37, 37, 0.05);
+}
+
+.artista-block a {
+    color: #9CDABC;
+    /* Turquoise (was Atlantic) */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.artista-block a:hover {
+    color: #FF8072;
+    /* Coral */
+}
+
+.artista-img {
+    display: block;
+    margin: 0 auto 1.2rem auto;
+    max-width: 220px;
+    width: 100%;
+    border-radius: 0 !important;
+    box-shadow: 0 2px 12px rgba(59, 47, 201, 0.07);
+}
+
+@media (max-width: 600px) {
+    .artistas-goldwell-desc {
+        max-width: 98vw;
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .artista-block {
+        padding: 1rem 0.2rem;
+    }
+}
+
+/* Centra los títulos y el Instagram en los bloques de artistas */
+.artista-block p:first-of-type,
+.artista-block p:last-of-type {
+    text-align: center;
+}
+
+/* Reinasofia Fotos */
+.reinasofia-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.reinasofia-fotos .artista-img {
+    max-width: 220px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(59, 47, 201, 0.07);
+    background: #fff;
+    margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .reinasofia-fotos {
+        gap: 1rem;
+    }
+
+    .reinasofia-fotos .artista-img {
+        max-width: 48vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .reinasofia-fotos {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .reinasofia-fotos .artista-img {
+        max-width: 98vw;
+    }
+}
+
+.agenda-img {
+    display: block;
+    margin: 1.2rem auto;
+    max-width: 220px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(59, 47, 201, 0.07);
+    background: #fff;
+}
+
+.vermadrid-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    margin: 0rem 0 2rem 0;
+}
+
+.vermadrid-btns .btn-descubre-agenda {
+    width: 40%;
+    max-width: 280px;
+}
+
+@media (max-width: 600px) {
+    .vermadrid-btns {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .vermadrid-btns .btn-descubre-agenda {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Haz que el menú hamburguesa y el logo sean fijos arriba */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1002;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(59, 47, 201, 0.07);
+}
+
+/* Musicales Grid y Cards */
+.musicales-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1.2rem;
+    margin: 2rem 0;
+    justify-items: center;
+}
+
+.musical-card {
+    background: #fafafa;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(59, 47, 201, 0.07);
+    padding: 1.2rem 0.7rem 1.5rem 0.7rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.musical-card h3 {
+    font-size: 1.05rem;
+    font-family: 'OriflameSans3.0-Bold', Arial, sans-serif;
+    margin-bottom: 1rem;
+}
+
+.musical-card .musical-img-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.musical-card .artista-img {
+    max-width: 110px;
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(59, 47, 201, 0.07);
+    transition: transform 0.15s;
+}
+
+.musical-card .musical-img-link:hover .artista-img,
+.musical-card .musical-img-link:focus .artista-img {
+    transform: scale(1.05);
+}
+
+.musical-card a {
+    color: #2774AE;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 0.98rem;
+    margin-top: 0.5rem;
+    word-break: break-all;
+}
+
+@media (max-width: 700px) {
+    .musicales-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 0.7rem;
+    }
+
+    .musical-card {
+        max-width: 180px;
+        padding: 1rem 0.3rem 1.2rem 0.3rem;
+    }
+
+    .musical-card .artista-img {
+        max-width: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .musicales-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .musical-card {
+        max-width: 95vw;
+    }
+}
+
+/* Justifica el texto de la sección principal */
+.goldwell-fest-desc p,
+.goldwell-fest-desc {
+    text-align: justify;
+}
+
+/* Añade esto a styles.css para el formato tipo la foto */
+.agenda-minimal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-top: 2.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.agenda-minimal-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+.agenda-minimal-hour {
+    font-family: 'OriflameSans3.0-Bold', Arial, sans-serif;
+    font-size: 2.1rem;
+    color: #222;
+    min-width: 70px;
+    text-align: right;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.agenda-minimal-sep {
+    width: 2px;
+    height: 2.5rem;
+    background: #222;
+    margin: 0 1rem 0 0.2rem;
+    border-radius: 2px;
+    align-self: center;
+    opacity: 0.18;
+}
+
+.agenda-minimal-desc {
+    font-family: 'OriflameSans3.0-Bold', Arial, sans-serif;
+    font-size: 1.1rem;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.3;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .agenda-minimal {
+        max-width: 98vw;
+        gap: 0.7rem;
+    }
+
+    .agenda-minimal-hour {
+        font-size: 1.3rem;
+        min-width: 48px;
+    }
+
+    .agenda-minimal-sep {
+        height: 2rem;
+        margin: 0 0.5rem 0 0.2rem;
+    }
+
+    .agenda-minimal-desc {
+        font-size: 0.98rem;
+    }
+}
+
+/* Justifica el texto de los bloques de artistas */
+.artista-block p {
+    text-align: justify;
+}
+
+/* Añade esto a styles.css */
+.agenda-slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem auto 2rem auto;
+    max-width: 700px;
+    position: relative;
+    /* Elimina gap para que las flechas no estén fuera */
+    gap: 0;
+}
+
+.agenda-slider {
+    width: 600px;
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 2px 18px rgba(59, 47, 201, 0.09);
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.slider-img.active {
+    opacity: 1;
+    z-index: 2;
+    position: relative;
+    pointer-events: auto;
+}
+
+/* Flechas dentro del slider, superpuestas a los lados y semi-transparentes */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.85;
+    transition: color 0.2s, opacity 0.2s;
+    box-shadow: none;
+    user-select: none;
+    padding: 0 0.3em;
+}
+
+.slider-arrow:hover {
+    color: #FF8072;
+    opacity: 1;
+}
+
+.slider-arrow-left {
+    left: 18px;
+}
+
+.slider-arrow-right {
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 700px) {
+    .agenda-slider {
+        width: 98vw;
+        height: 48vw;
+        min-height: 180px;
+        max-width: 98vw;
+    }
+
+    .agenda-slider-container {
+        max-width: 98vw;
+    }
+
+    .slider-arrow {
+        width: 44px;
+        height: 44px;
+        font-size: 1.5rem;
+        left: 8px;
+        right: 8px;
+    }
+}
+
+/* Justifica y centra el texto de toda la página quehacerenmadrid.html */
+body,
+.vermadrid-section,
+.vermadrid-header,
+.vermadrid-desc,
+.vermadrid-desc p,
+.comer-desc,
+.comer-desc p {
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+.vermadrid-header h2,
+.vermadrid-num,
+.vermadrid-time,
+.comer-desc h3,
+.comer-zona {
+    text-align: center;
+}
+
+/* Musicales List and Item Styles */
+.musicales-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.musicales-item {
+    background: #fff;
+    border: 4px solid #FF8072;
+    box-shadow: 0 2px 12px rgba(59, 47, 201, 0.07);
+    border-radius: 0;
+    padding: 2rem 1.2rem;
+}
+
+.musical-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+.musical-desc h3 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.musical-desc p {
+    text-align: justify;
+    margin-bottom: 0.5rem;
+}
+
+.musical-desc .artista-img {
+    max-width: 320px;
+    width: 100%;
+    margin-bottom: 0.7rem;
+    border-radius: 0;
+}
+
+
+.musicales-item {
+    border-width: 15px !important;
+}
+
+/* Estilo ordenado y responsive para el bloque de discoteca */
+.discoteca-section {
+    margin-bottom: 2.2rem;
+}
+
+.discoteca-card {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    background: #fff;
+    border: 8px solid #FF8072;
+    /* borde grueso como "El Jefe" */
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(59, 47, 201, 0.06);
+}
+
+.discoteca-info {
+    flex: 1;
+}
+
+.faqs-title {
+    font-family: 'OriflameSans3.0-Bold', Arial, sans-serif;
+    font-size: 1rem;
+    margin: 0 0 0.6rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #111;
+}
+
+.discoteca-text {
+    font-family: 'OriflameSans3.0-Regular', Arial, sans-serif;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+    color: #222;
+}
+
+.discoteca-date {
+    display: inline-block;
+    margin-left: 0.4rem;
+    font-weight: 700;
+}
+
+.discoteca-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+/* Reutiliza .btn-descubre-agenda si ya existe, si no: */
+.btn-descubre-agenda {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    font-family: 'OriflameSans3.0-Bold', Arial, sans-serif;
+    color: #222;
+    background: #fff;
+    border: 2px solid #222;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.18s, color 0.18s;
+}
+
+.btn-descubre-agenda:hover {
+    background: #222;
+    color: #fff;
+}
+
+/* Imagen lateral */
+.discoteca-media {
+    width: 260px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discoteca-media .artista-img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 4px solid #FF8072;
+}
+
+/* Responsive: en móvil apilar y centrar */
+@media (max-width: 820px) {
+    .discoteca-card {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .discoteca-media {
+        width: 100%;
+        max-width: 540px;
+    }
+
+    .discoteca-media .artista-img {
+        max-width: 100%;
+    }
+
+    .faqs-title {
+        text-align: center;
+    }
+
+    .discoteca-text {
+        text-align: justify;
+    }
+
+    .discoteca-actions {
+        justify-content: center;
+    }
+}
