@@ -1504,3 +1504,16 @@ body,
         justify-content: center;
     }
 }
+
+/* Specific fix for long menu item */
+.main-nav ul li a[href="hoteloccidentalaranjuez.html"] {
+    font-size: 0.75rem;
+    /* Smaller than default 0.9rem */
+}
+
+@media (min-width: 900px) {
+    .main-nav ul li a[href="hoteloccidentalaranjuez.html"] {
+        font-size: 0.9rem;
+        /* Smaller than default 1.05rem */
+    }
+}
