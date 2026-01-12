@@ -25,13 +25,13 @@
 
 /* Fondo general */
 body {
-    background: #FFFFFF;
-    /* Oriflame White */
+    background: #9CDABC;
+    /* Oriflame Green */
     font-family: 'OriflameSans3.0-Regular', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #2D2525;
-    /* Oriflame Warm Black */
+    color: #000000;
+    /* Black */
     font-size: 16px;
     transition: transform 0.35s cubic-bezier(.77, 0, .175, 1);
     padding-top: 76px;
@@ -484,8 +484,8 @@ body,
 .vermadrid-item {
     display: flex;
     flex-direction: row;
-    background: #9CDABC;
-    /* Green */
+    background: #FFFFFF;
+    /* White for Aranjuez blocks/Comer items on Green BG */
     border: 2px solid #ffffff;
     border-radius: 8px;
     overflow: hidden;
@@ -495,13 +495,13 @@ body,
 }
 
 .comer-item {
-    border: 4px solid #9CDABC !important;
+    border: 4px solid #FFFFFF !important;
     box-shadow: none !important;
 }
 
 .comer-time,
 .vermadrid-time {
-    background: #9CDABC;
+    background: #FFFFFF;
     color: #2D2525;
     display: flex;
     align-items: center;
@@ -575,7 +575,7 @@ body,
 .intro-line {
     font-size: 1.5rem !important;
     text-align: left !important;
-    color: #2D2525;
+    color: #000000;
     margin: 0;
 }
 
@@ -605,8 +605,8 @@ body,
     flex-shrink: 0;
     font-family: 'OriflameSans3.0-Bold', Arial, sans-serif;
     font-size: 1.1rem;
-    color: #9CDABC;
-    /* Turquoise Green */
+    color: #000000;
+    /* Black */
     padding-right: 1.5rem;
     text-align: right;
     padding-top: 0.2rem;
